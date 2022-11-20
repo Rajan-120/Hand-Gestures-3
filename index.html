@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hand Gestures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <center>
+    <div class="jumbotron header">
+        <h2 style="margin-top:-20px;">H a n d G e s t u r e s</h2>
+        <span class="icons">&#9996;</span>
+        <span class="icons">&#128077;</span>
+        <span class="icons">&#129311;</span>
+        <span class="icons">&#128078;</span>
+        <span class="icons">&#128076;</span>
+    </div>
+    <br>
+    <h3 style="color: white; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight:300;">Take a snapshot to know your Gesture's meaning...</h3>
+    <br><br>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+    <label>Webcam:</label>
+    <div id="camera">
+    </div>
+    <br><br>
+    <button onclick="takeSnapshot()">Take Snapshot</button>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+    <label id="prediction">Prediction for your Gesture - </label>
+    <p id="p_icon"></p>
+</div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+    <label>Snapshot of your Hand Gesture</label>
+    <div id="result">
+    </div>
+    <br><br>
+    <button id="snap-btn" onclick="check()">Predict by Snapshot</button>
+</div>
+   </center> 
+   <script src="main.js"></script>
+</body>
+</html>
